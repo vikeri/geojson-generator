@@ -1,0 +1,14 @@
+{
+  "name": "geojson-generator",
+  "version": "1.0.0",
+  "description": "A server that generates dummy GeoJSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Viktor Eriksson <viktor.eriksson2@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "json-api-generator": "1.0.1"
+  }
+}
