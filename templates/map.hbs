@@ -3,26 +3,23 @@
 "features":
 	[
 	{{#repeat 5 }}
-	{
-	"type": "Feature",
-	"properties": {
-		"id": "{{index}}",
-		"title": "{{place}}",
-		"description": "{{text}}",
-        "image": "{{imageUrl}}"
-	},
-	"geometry": {
-		"coordinates": [
-          {{randomFloat -90 90}},
-          {{randomFloat -30 60}}
-		],
-		"type": "Point"
-	},
-	"id": "{{index}}"
-}
-
-
-{{/repeat}}
-]
-
+		{
+		"type": "Feature",
+		"properties": {
+			"id": "{{index}}",
+			"title": "{{place}}", {{! Here we use our handler defined in index.js }}
+			"description": "{{text}}",
+			"image": "{{imageUrl}}"
+		},
+		"geometry": {
+			"coordinates": [
+			{{randomFloat -90 90}},
+			{{randomFloat -30 60}}
+			],
+			"type": "Point"
+		},
+		"id": "{{index}}"
+		}
+	{{/repeat}}
+	]
 }

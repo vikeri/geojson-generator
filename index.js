@@ -1,21 +1,22 @@
 "use strict";
 
-var generator = require("json-api-generator");
+var mock = require("json-api-generator");
 
-generator({
-	templateDir: './templates/',
-	helpers: {
+mock({
+    // We keep our templates in a directory called templates
+    templateDir: './templates/',
+
+    // We create a helper that will return one of the values Project, Office or Trip.
+    helpers: {
         place: function() {
             var place = ["Project","Office","Trip"];
             return place[Math.floor(Math.random() * place.length)];
-        },
-        markerSymbol: function () {
-            var symbols = ["w","suitcase","heart","commercial"];
-            return symbols[Math.floor(Math.random() * symbols.length)];
         }
-	},
-    port: 1337,
-	log: true,
-	open: true,
-});
+    },
 
+    // We wish to see when the resource is requested in the terminal
+    log: true,
+
+    // We also with that the browser should be opened to the correct url when starting the server
+    open: true,
+});
